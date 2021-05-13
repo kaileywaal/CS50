@@ -57,8 +57,6 @@ ciphertext: jrssb, ybwsp
 
 ## Week 3: Algorithms
 
-Week 3 focused on algorithms, specifically dealing with sorting algorithms, recursion,
-
 ### Plurality
 
 This program runs a plurality election, meaning each voter gets one vote and the winner is determined by which candidate receives the most votes.
