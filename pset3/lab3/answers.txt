@@ -1,0 +1,12 @@
+sort1 uses: bubble sort
+
+How do you know?: Sorting random and reversed numbers took a long time, but it was fast at sorting already sorted numbers
+
+sort2 uses: merge sort
+
+How do you know?: Random and presorted numbers took approximately the same amount of time, indicating that the min and max time for the program to run is the same order of n.
+Additionally, it was the fastest program overall.
+
+sort3 uses: selection sort
+
+How do you know?: Random and sorted numbers took about the same amount of time, and it was the slowest program, especially on larger data sets.

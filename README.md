@@ -54,3 +54,58 @@ $ ./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
 plaintext:  hello, world
 ciphertext: jrssb, ybwsp
 ```
+
+## Week 3: Algorithms
+
+Week 3 focused on algorithms, specifically dealing with sorting algorithms, recursion,
+
+### Plurality
+
+This program runs a plurality election, meaning each voter gets one vote and the winner is determined by which candidate receives the most votes.
+
+```
+$ ./plurality Alice Bob
+Number of voters: 3
+Vote: Alice
+Vote: Bob
+Vote: Alice
+Alice
+```
+
+### Tideman
+
+This program runs a Tideman election and determines the winner. A Tideman election is a ranked-choice voting system where every voter ranks the candidates in order of preference. The winner is the candidate who would win the most head to head matchups if only two candidates exist.
+
+As explained in the problem set, the Tideman voting method consists of three parts:
+
+1. Tally: Once all of the voters have indicated all of their preferences, determine, for each pair of candidates, who the preferred candidate is and by what margin they are preferred.
+2. Sort: Sort the pairs of candidates in decreasing order of strength of victory, where strength of victory is defined to be the number of voters who prefer the preferred candidate.
+3. Lock: Starting with the strongest pair, go through the pairs of candidates in order and “lock in” each pair to the candidate graph, so long as locking in that pair does not create a cycle in the graph.
+
+The program runs as follows:
+
+```
+./tideman Alice Bob Charlie
+Number of voters: 5
+Rank 1: Alice
+Rank 2: Charlie
+Rank 3: Bob
+
+Rank 1: Alice
+Rank 2: Charlie
+Rank 3: Bob
+
+Rank 1: Bob
+Rank 2: Charlie
+Rank 3: Alice
+
+Rank 1: Bob
+Rank 2: Charlie
+Rank 3: Alice
+
+Rank 1: Charlie
+Rank 2: Alice
+Rank 3: Bob
+
+Charlie
+```
